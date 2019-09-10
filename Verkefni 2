@@ -1,0 +1,81 @@
+#liður 1
+print("veldu 3 tölur sem þæu vilt finna miðju tölu úr")
+t1 = int(input("tala1 = "))
+t2 = int(input("tala2 = "))
+t3 = int(input("tala3 = "))
+
+if (t1 > t2 and t2 > t3) or (t1 < t2 and t2 < t3):
+    print(str(t2) + " er miðjutalan ")
+
+elif (t2 > t3 and t3 > t1) or (t2 < t3 and t3 < t1):
+    print(str(t3) + " er miðjutalan ")
+
+elif (t3 > t1 and t1 > t2) or (t3 < t1 and t1 < t2):
+    print(str(t1) + " er miðjutalan ")
+
+#liður 2
+tegund = input("breyta cm í tommur [cm] eða öfugt [t] = ")
+if tegund == "cm":
+    cm1 = float(input("hversu margir cm = "))
+    print(cm1 / 2.54)
+elif tegund == "t":
+    t1 = float(input("hversu margar tommur = "))
+    print(t1 * 2.54)
+
+#liður 3
+month = int(input("hvaða mánuður er núna [1-12] = "))
+if month >= 1 and month <= 3:
+    print("Nú er daginn tekið að lengja.")
+elif month >= 4 and month <= 5:
+    print("Vorið er komið og grundirnar gróa.")
+elif month >= 6 and month <= 8:
+    print("Núna er sumarið komið með blóm í haga.")
+elif month >= 9 and month <= 10:
+    print("Núna er haustið gengið í garð.")
+elif month >= 11 and month <= 12:
+    print("Núna styttist í jólin.")
+else:
+    print("Er það bara mánuður???")
+
+#liður 4
+user = input("hvað heitirðu = ")
+gender = input("hvaða kyn ertu [kk] [kvk] [annað] = ")
+print("skrifaðu tvær tölut hér fyrir neðan")
+n1 = int(input("Tala1 = "))
+n2 = int(input("Tala2 = "))
+
+if gender == "kk":
+    print("Blessaður " + user)
+
+elif gender == "kvk":
+    print("blessuð " + user)
+
+elif gender == "annað":
+    print("blessuð/-aður " + user + " ég veit ekki hvaða kyn þú ert.")
+
+else:
+    print("blessuð/-aður " + user + " það var skrifað inn kyn sem forritið þekkir ekki.")
+
+if n1 > n2:
+    print("talan " + str(n1) + " er stærri en " + str(n2))
+    if (n1 - n2) < 100:
+        print("og það er minni en 100 munur á milli talnanna.")
+    elif (n1 - n2) > 100:
+        print("og það er meiri enn 100 munur á milli talnanna.")
+
+elif n1 < n2:
+    print("talan " + str(n2) + " er stærri en " + str(n1))
+    if (n2 - n1) < 100:
+        print("og það er minni en 100 munur á milli talnanna.")
+    elif (n2 - n1) > 100:
+        print("og það er meiri enn 100 munur á milli talnanna.")
+    
+else:
+    print("tölurnar eru jafn stór.")
+
+#liður 5
+number = int(input("skrifaðu tölu sem er lægri en 0 eða hærri en 10 = "))
+if number > 0 and number < 10:
+    print("Þessi tala er ekki lægri en núll eða hærri en 10.")
+else:
+    print("vel gert.")
